@@ -9,26 +9,23 @@ theRef.on('value', function(snap) {
     
     $.each(prodData, function(index, value) {
 
-        var prodPreview = '<div class="well col-sm-6 col-md-3 col-lg-4">';
+        var prodPreview = '<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">';
+
+        prodPreview += '<div class="my-list">';
 
 
-        prodPreview += '<div class="img-responsive img-thumbnail">';
         if (value.image == 'NONE') {
             prodPreview += '<img alt="No Pic">';
         } else {
             prodPreview += '<img src=' + value.image + '>';
         }
-        prodPreview += '</div>';
-        prodPreview += '<div class = "caption>"';
-        prodPreview += '<div class = "row>"';
-        prodPreview += '<div class="col-md-6 col-xs-6">';
-        prodPreview += '<h3>' + value.name + '</h3>';
-        prodPreview += '</div>';
+        prodPreview += '<h3>Name: ' + value.name + '</h3>';
+        prodPreview += '<span>Prise: $' + value.price + '</span>';
 
-        prodPreview += '<div class="col-md-6 col-xs-6 price">';
-        prodPreview += '<h3><label>$' + value.price + '</label></h3>';
-        prodPreview += '<p>Status: ' + value.description + '</p>'; prodPreview += '</div>';
 
+        prodPreview += '<div class="offer">Description: ' + value.description + '</div>'; prodPreview += '</div>';
+
+        prodPreview += '</div>';
         prodPreview += '</div>';
         prodPreview += '</div>';
         prodPreview += '</div>';
