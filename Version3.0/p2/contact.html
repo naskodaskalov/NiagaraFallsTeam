@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The SoftUni Alpha Epsilon Pi Drinking Society</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<header class="row">
+			<div class="col-sm-3 logo"><img src="images/logo.jpg" alt="The SoftUni Drinking Society. "></div>
+			<div class="col-sm-9 tagline">You'll feel at home in our organization</div>
+		</header>
+		<div class="row">
+			<nav class="navbar navbar-default" role="navigation">
+			  <div class="container-fluid">
+
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+					  <span class="icon-bar"></span>
+			      </button>
+			    </div>
+
+
+			    <div class="collapse navbar-collapse" id="navbar">
+			      <ul class="nav navbar-nav">
+			        <li><a href="index1.html">Home</a></li>
+			        <li><a href="execs.html">Executive Team</a></li>
+			        <li class="active"><a href="contact.html">Contact</a></li>
+					  <li><a href="../index.html">Orders for tonight</a></li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+		</div>
+		<div class="row">
+			<h2>Contact Us</h2>
+			<form role="form">
+		        <fieldset>
+		          <legend>Have more questions?</legend>
+		          <div class="form-group">
+		          	<label for="name" class="col-sm-2">Your name</label>
+		          	<div class="col-sm-10">
+		          		<input type="text" name="name" class="form-control">
+		          	</div>
+		          </div>
+		          <div class="form-group">
+		          	<label class="control-label">What kind of cocktail are you interested in?</label>
+		          	<div class="radio">
+			            <label>
+			              <input type="radio" name="roomtype" value="queen">
+			              Strong</label>
+			        </div>
+			        <div class="radio">
+		            	<label>
+		              	<input type="radio" name="roomtype" value="king">
+		              	Medium</label>
+		            </div>
+		            <div class="radio">
+		            	<label>
+		              	<input type="radio" name="roomtype" value="2queen">
+		              	Light</label>
+		          	</div>
+		          	<div class="radio">
+		            	<label>
+		              	<input type="radio" name="roomtype" value="suite">
+		              	No cocktail, just pure alcohol</label>
+		            </div>
+		           </div>
+		           <div class="form-group">
+			          <label class="control-label">Would you prefer a smoking place</label>
+			          <div class="radio">
+			          	<label>
+			            <input type="radio" name="smoking" value="smoking">
+			            Smoking</label>
+			          </div>
+			          <div class="radio">
+			          	<label>
+			            <input type="radio" name="smoking" value="nonsmoking">
+			            Non-smoking</label>
+			          </div>
+			       </div>
+			       <div class="form-group">
+			          <label for="continent" class="control-label">Your language at SoftUni:</label>
+			          <select name="continent" size="1" class="form-control">
+			            <option selected>Select one...</option>
+			            <option value="afr">C#</option>
+			            <option value="ant">Java</option>
+			            <option value="asia">JS</option>
+			            <option value="aus">Python</option>
+			            <option value="eur">C++</option>
+			            <option value="na">Ruby</option>
+			            <option value="sa">A combination of more than 1</option>
+			          </select>
+		      		</div>
+		      		<div class="form-group">
+			          <label for="comments" class="control-label">Comments:</label>
+			          <textarea name="comments" class="form-control" rows="3" data-toggle="tooltip" title="We welcome your feedback!" data-placement="bottom"></textarea>
+			        </div>
+
+			          <label for="subscribe" class="checkbox-inline">
+			            <input name="subscribe" type="checkbox" value="subscribe" data-toggle="collapse" data-target="#email">
+			            Subscribe me to the newsletter </label>
+			        <div class="form-group collapse in" id="email">
+			          <label for="email" class="col-sm-2">Your email</label>
+			          <div class="col-sm-10">
+			            <input type="text" name="email" class="form-control">
+			          </div>
+			        </div>
+			        <div class="form-group">
+		          		<button type="submit" class="btn btn-primary">Submit</button>
+		      		</div>
+		        </fieldset>
+		    </form>
+
+		</div>
+		<footer class="row siteinfo">
+			<a href="http://softuni.bg/">Any resemblance to real brands, products, or people is purely coincidental.</a>
+		</footer>
+	</div><!-- end container -->
+
+    
+<!-- javascript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    	$("textarea").tooltip();
+    	$(".form-group.collapse").collapse();
+    </script>
+
+</body>
+</html>
