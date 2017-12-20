@@ -1,9 +1,43 @@
+/*background img*/
+.full {
+
+    background-image:url(../img/mixology_y1_gal_006_ful1.jpg);
+    background-repeat: no-repeat;
+    min-height: 679px;
+    background-size: cover;
+
+}
+.text-in-bgImage {
+    text-shadow: 0 0 3px black, 0 0 5px #ff0034;
+    color: #fff;
+    text-transform: uppercase;
+}
+/*.logo {*/
+    /*background-image: url();*/
+    /*background-repeat: no-repeat;*/
+    /*min-height: 300px;*/
+    /*background-size: 20%;*/
+
+/*}*/
+
+/*background umg*/
+
+/*main containter*/
+#main {
+
+
+}
+#main>div {
+
+
+
+}
 .prodListHeader{
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: grey;
+    border: 1px solid grey;
+
     background-color: black;
     color: white;
+
 }
 
 .picFix {
