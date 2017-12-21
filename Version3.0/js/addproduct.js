@@ -4,7 +4,7 @@ var itemName;
 var itemDescription;
 var itemPrice;
 var baseImg;
-
+// закачане на картинка
 $('#imageInput').change(function() {
     var reader = new FileReader();
     reader.onloadend = function() { 
@@ -14,7 +14,7 @@ $('#imageInput').change(function() {
     reader.readAsDataURL(this.files[0]);
 });
 
-
+// форма
 $('#addForm').change(function(){
     itemName = $('#itemName').val();
     itemDescription = $('#itemDescription').val();
@@ -26,7 +26,7 @@ $('#addForm').change(function(){
     }
 });
 
-
+// добавя въведената информация към базата
 function addProduct() {
     itemName = $('#itemName').val();
     itemDescription = $('#itemDescription').val();

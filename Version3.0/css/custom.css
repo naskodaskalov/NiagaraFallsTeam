@@ -1,4 +1,7 @@
+* {margin: 0;
+    padding:0;}
 /*background img*/
+
 .full {
 
     background-image:url(../img/mixology_y1_gal_006_ful1.jpg);
@@ -68,8 +71,7 @@ img{max-width:100%;}
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
-    margin: 0px;
-    padding: 0px;
+
     border-bottom: 1px solid #ccc4c4;
     margin-bottom: 5px;
     padding-bottom: 5px;
@@ -79,7 +81,7 @@ img{max-width:100%;}
 .my-list .offer{
     width: 100%;
     float: left;
-    margin: 5px 0;
+
     border-top: 1px solid #ccc4c4;
     margin-top: 5px;
     padding-top: 5px;
