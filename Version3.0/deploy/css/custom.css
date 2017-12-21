@@ -1,9 +1,35 @@
+* {margin: 0;
+    padding:0;}
+
+/*background img*/
+
+.full {
+
+    background-image:url(../img/mixology_y1_gal_006_ful1.jpg);
+    background-repeat: no-repeat;
+    min-height: 679px;
+    background-size: cover;
+
+}
+
+.text-in-bgImage, #h3Landing {
+    text-shadow: 0 0 3px black, 0 0 5px #f5efef;
+    color: #f5efef;
+    text-transform: uppercase;
+}
+
+#h3Landing {
+    text-align: center;
+    border: 1px solid #f5efef;
+    border-radius: 25px;
+    box-shadow: 2px 3px 0px #e4d8d8;
+}
+
 .prodListHeader{
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: grey;
+    border: 1px solid grey;
     background-color: black;
     color: white;
+
 }
 
 .picFix {
@@ -15,10 +41,55 @@
 }
 
 body {
-padding-top: 65px;
+    padding-top: 65px;
 }
 
 img {
-height:140px; 
-width:140px;
+    height:140px;
+    width:140px;
 }
+
+/*test*/
+
+img{max-width:100%;}
+*{transition: all .5s ease;-moz-transition: all .5s ease;-webkit-transition: all .5s ease}
+.my-list {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f5efef;
+    float: left;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 2px 3px 0px #e4d8d8;
+    position:relative;
+    overflow:hidden;
+}
+.my-list h3{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+
+    border-bottom: 1px solid #ccc4c4;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.my-list span{float:left;font-weight: bold;}
+.my-list span:last-child{float:right;}
+.my-list .offer{
+    width: 100%;
+    float: left;
+
+    border-top: 1px solid #ccc4c4;
+    margin-top: 5px;
+    padding-top: 5px;
+    color: #afadad;
+}
+.detail {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    text-align: center;
+    background: #fff;height: 100%;width:100%;
+}
+

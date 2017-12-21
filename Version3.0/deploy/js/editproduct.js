@@ -8,7 +8,7 @@ var oneProduct = {};
 
 prodRef.child(prodID).once('value', function(snapshot){
     oneProduct = snapshot.val();
-    console.log(oneProduct);
+    console.log(oneProduct)
     name = oneProduct.name;
     desc = oneProduct.description;
     price = oneProduct.price;
