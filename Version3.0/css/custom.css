@@ -3,12 +3,10 @@
 /*background img*/
 
 .full {
-
-    background-image:url(../img/mixology_y1_gal_006_ful1.jpg);
+    background-image:url(../images/background.jpg);
     background-repeat: no-repeat;
-    min-height: 679px;
+    min-height: 300px;
     background-size: cover;
-
 }
 .text-in-bgImage {
     text-shadow: 0 0 3px black, 0 0 5px #ff0034;

@@ -300,23 +300,23 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     return this
   }
 
-  Carousel.prototype.getActiveindex1 = function () {
+  Carousel.prototype.getActiveIndex = function () {
     this.$active = this.$element.find('.item.active')
     this.$items  = this.$active.parent().children()
 
-    return this.$items.index1(this.$active)
+    return this.$items.index(this.$active)
   }
 
   Carousel.prototype.to = function (pos) {
     var that        = this
-    var activeindex1 = this.getActiveindex1()
+    var activeIndex = this.getActiveIndex()
 
     if (pos > (this.$items.length - 1) || pos < 0) return
 
     if (this.sliding)       return this.$element.one('slid.bs.carousel', function () { that.to(pos) })
-    if (activeindex1 == pos) return this.pause().cycle()
+    if (activeIndex == pos) return this.pause().cycle()
 
-    return this.slide(pos > activeindex1 ? 'next' : 'prev', $(this.$items[pos]))
+    return this.slide(pos > activeIndex ? 'next' : 'prev', $(this.$items[pos]))
   }
 
   Carousel.prototype.pause = function (e) {
@@ -368,7 +368,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     if (this.$indicators.length) {
       this.$indicators.find('.active').removeClass('active')
       this.$element.one('slid.bs.carousel', function () {
-        var $nextIndicator = $(that.$indicators.children()[that.getActiveindex1()])
+        var $nextIndicator = $(that.$indicators.children()[that.getActiveIndex()])
         $nextIndicator && $nextIndicator.addClass('active')
       })
     }
@@ -437,13 +437,13 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     var $this   = $(this), href
     var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
     var options = $.extend({}, $target.data(), $this.data())
-    var slideindex1 = $this.attr('data-slide-to')
-    if (slideindex1) options.interval = false
+    var slideIndex = $this.attr('data-slide-to')
+    if (slideIndex) options.interval = false
 
     $target.carousel(options)
 
-    if (slideindex1 = $this.attr('data-slide-to')) {
-      $target.data('bs.carousel').to(slideindex1)
+    if (slideIndex = $this.attr('data-slide-to')) {
+      $target.data('bs.carousel').to(slideIndex)
     }
 
     e.preventDefault()
@@ -704,13 +704,13 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
 
     if (!$items.length) return
 
-    var index1 = $items.index1($items.filter(':focus'))
+    var index = $items.index($items.filter(':focus'))
 
-    if (e.keyCode == 38 && index1 > 0)                 index1--                        // up
-    if (e.keyCode == 40 && index1 < $items.length - 1) index1++                        // down
-    if (!~index1)                                      index1 = 0
+    if (e.keyCode == 38 && index > 0)                 index--                        // up
+    if (e.keyCode == 40 && index < $items.length - 1) index++                        // down
+    if (!~index)                                      index = 0
 
-    $items.eq(index1).focus()
+    $items.eq(index).focus()
   }
 
   function clearMenus(e) {
